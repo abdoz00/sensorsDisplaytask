@@ -1,0 +1,19 @@
+<div class="tables">
+  <table>
+    <thead>
+      <tr>
+        <th>Device Id (decimal)</th>
+        <th>Last reported temperature</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of latestReadings">
+        <td class="clickable" (click)="openDeviceReadingList(row.deviceId)"><a>{{ row.deviceId }}</a></td>
+        <td>{{ row.readingVal }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="close-button" (click)="closeDeviceDetails()" *ngIf="showDeviceDetailsTable"><<</button>
+  <app-device-details [data]="deviceDetails" *ngIf="showDeviceDetailsTable"></app-device-details>
+</div>
+

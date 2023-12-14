@@ -1,0 +1,6 @@
+<div>
+    <label for="readingInput">Reading Input:</label><br>
+    <input id="readingInput" name="readingInput" [(ngModel)]="inputData" type="text"><br>
+    <button (click)="sumbitReading()">Submit</button>
+</div>
+<reading-list-component [reloadComponent] = "reloadLatestData"></reading-list-component>

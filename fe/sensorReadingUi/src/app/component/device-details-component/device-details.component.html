@@ -1,0 +1,12 @@
+<div>
+    <table>
+      <tr>
+        <th>Temperature</th>
+        <th>Time</th>
+      </tr>
+      <tr *ngFor="let row of data">
+        <td>{{ row.readingVal }}</td>
+        <td>{{ row.readingTime }}</td>
+      </tr>
+    </table>
+  </div>
